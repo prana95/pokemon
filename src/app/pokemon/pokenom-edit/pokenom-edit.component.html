@@ -1,0 +1,9 @@
+<h2 class="header center">Editer {{singlePokemon?.name}}</h2>
+
+<p class="center">
+    <img *ngIf="singlePokemon" [src]="singlePokemon.picture">
+</p>
+<!--pokemon vien de pokemon.serviec.ts @input  -->
+<app-pokenom-form [pokemon]="singlePokemon"></app-pokenom-form>
+
+

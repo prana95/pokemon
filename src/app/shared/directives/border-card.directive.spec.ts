@@ -1,0 +1,10 @@
+import { ElementRef } from '@angular/core';
+import { BorderCardDirective } from './border-card.directive';
+
+describe('BorderCardDirective', () => {
+  it('should create an instance', () => {
+    //let element = ElementRef;
+    const directive = new BorderCardDirective();
+    expect(directive).toBeTruthy();
+  });
+});
