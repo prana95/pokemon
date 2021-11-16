@@ -7,6 +7,8 @@ import { BorderCardDirective } from '../shared/directives/border-card.directive'
 import { PokemonTypeColorPipe } from '../shared/pipes/pokemon-type-color.pipe';
 import { PokenomEditComponent } from './pokenom-edit/pokenom-edit.component';
 import { FormsModule } from '@angular/forms';
+import { SearchPokemonComponent } from './search-pokemon/search-pokemon.component';
+import { LoaderComponentComponent } from './loader-component/loader-component.component';
 
 
 
@@ -18,7 +20,9 @@ import { FormsModule } from '@angular/forms';
     PokemonTypeColorPipe,
     DetailPokemonComponent,
     PokenomEditComponent,
-    PokenomFormComponent
+    PokenomFormComponent,
+    SearchPokemonComponent,
+    LoaderComponentComponent
   ],
   imports: [
     CommonModule, 
