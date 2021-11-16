@@ -63,7 +63,7 @@ export class PokemonsService {
     console.log(url)
     return this.http.delete<Pokemon>(url, httpOptions).pipe(
       tap(() => console.log(`Delete Pokemon id=${pokemon.id} `)),
-      catchError(this.handleError<any>(`error: delete Pokemon id = ${pokemon.id}`))
+      catchError(this.handleError<any>(`error: deleteSinglePokemon id = ${pokemon.id}`))
     );
   }
   getPokemonTypes():string[]{
@@ -78,5 +78,22 @@ export class PokemonsService {
     tap(_=> console.log(`Update Pokemon id=${pokemon.id} `)),
     catchError(this.handleError<any>('update Pokemon'))
     );
+  }
+
+  searchPokemons(term:string):Observable<Pokemon[]>{
+    //on testsi l'utilisateur ,'a pas asisi un terme vide.
+    //dans ce cas, on n'a pas besoin d'envoyer la réquete
+    //Nous renvoyons un tavleau vide sous forme d'un observable gravce à l'operateur of 
+    if(!term.trim()){
+      return of ([])
+    }
+    
+    //Envoyer une requete get via l'observavble 
+    //url spécifique mis en place avec notre API simulée qui renvoie tous les pokemons
+    //dont la propritété nom contient ou égale au terme de la recherche.
+    return this.http.get<Pokemon[]>(`${this.pokemonsUrl}/?name=${term}`).pipe(
+      tap(()=>console.log(`found pokemons matching "${term}"`)),
+      catchError(this.handleError<Pokemon[]>('searchPokemon',[]))
+      );
   }
 }
