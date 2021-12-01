@@ -8,12 +8,14 @@ import { PokemonsModule } from './pokemon/pokemons.module';
 import { PokemonsService } from './pokemon/pokemons.service';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './shared/in-memory-data.service';
+//import { LoginComponent } from './login/login.component';
 //import { PokenomFormComponent } from './pokemon/pokenom-form/pokenom-form.component';
 
 
 @NgModule({
   declarations: [
     AppComponent
+    //LoginComponent
 
   ],
   imports: [

@@ -5,6 +5,10 @@ import { tap,catchError } from 'rxjs/operators';
 import { Pokemon } from '../Pokemon';
 import { LIST_POKEMONS } from '../shared/list.pokemons';
 import { PokemonsModule } from './pokemons.module';
+import {enableProdMode} from '@angular/core';
+enableProdMode();
+
+
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +18,7 @@ export class PokemonsService {
   constructor(private http: HttpClient) { }
   //varaible
   private pokemonsUrl ='api/pokemon';
-
+  
   getListPokemons():Observable<Pokemon[]>{
 
     return this.http.get<Pokemon[]>(this.pokemonsUrl).pipe(

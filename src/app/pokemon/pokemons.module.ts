@@ -9,7 +9,7 @@ import { PokenomEditComponent } from './pokenom-edit/pokenom-edit.component';
 import { FormsModule } from '@angular/forms';
 import { SearchPokemonComponent } from './search-pokemon/search-pokemon.component';
 import { LoaderComponentComponent } from './loader-component/loader-component.component';
-
+import { LoginComponent } from '../login/login.component';
 
 
 
@@ -22,7 +22,8 @@ import { LoaderComponentComponent } from './loader-component/loader-component.co
     PokenomEditComponent,
     PokenomFormComponent,
     SearchPokemonComponent,
-    LoaderComponentComponent
+    LoaderComponentComponent,
+    LoginComponent
   ],
   imports: [
     CommonModule, 
