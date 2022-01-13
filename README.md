@@ -4,7 +4,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Prerequisites 
 Node.js
-Launch this command in the terminal
+
+Launch this command in the terminal:
 - `npm i` to installs package and all its dependencies.
 
 ## Development server
