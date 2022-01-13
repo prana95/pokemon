@@ -2,6 +2,8 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.7.
 
+To see the created site in action:(https://prana95.github.io/pokemon/)[https://prana95.github.io/pokemon/]
+
 ## Prerequisites 
 Node.js
 
